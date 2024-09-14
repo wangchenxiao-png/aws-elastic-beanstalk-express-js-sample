@@ -1,4 +1,4 @@
-FROM node:16
+FROM registry.cn-hangzhou.aliyuncs.com/jsonhc/node:16.13.0-alpine
 WORKDIR /app
 COPY . .
 RUN npm install
