@@ -6,7 +6,7 @@ pipeline {
                 script {
                     git(
                         branch: 'main',
-                        url: 'git@github.com:jsonhc/aws-elastic-beanstalk-express-js-sample.git',
+                        url: 'git@github.com:wangchenxiao-png/aws-elastic-beanstalk-express-js-sample.git',
                         credentialsId: 'jenkins-ssh-github'
                     )
                 }
