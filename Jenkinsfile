@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     sh "docker build -t web ."
-                    sh "docker stop web && docker rm web && docker run -d -p 9090:8080 --name web web"
+                    sh "docker stop web && docker rm web && docker run -d -p 8080:8080 --name web web"
                 }
             } 
         }
@@ -25,7 +25,7 @@ pipeline {
                 echo 'Testing...'
                 snykSecurity(
                   snykInstallation: 'snyk',
-                  snykTokenId: 'Snyk-API-token',
+                  snykTokenId: 'snyk-api-token',
                   severity: 'critical',
                   // place other parameters here
                 )
