@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     sh "docker build -t web ."
-                    sh "docker stop web && docker rm web && docker run -d -p 8080:8080 --name web web"
+                    sh "docker stop web && docker rm web && docker run -d -p 8085:8080 --name web web"
                 }
             } 
         }
